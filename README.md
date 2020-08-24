@@ -14,7 +14,9 @@ Usage: `./RRF-Gen.py [inputfile] [outputfile]`
 eg: `./RRF-Gen.py nozzle.gif nozzle.img`
 
 ## RRF-View.py
-Displays a preview of the images
+Displays a preview of the images.
+
+Usage: `./RRF-View.py [inputfile]`
 
 ## In use
 I used this to generate some images for [my menu setup](https://github.com/jameswood/Duet-Maestro-Menu)
