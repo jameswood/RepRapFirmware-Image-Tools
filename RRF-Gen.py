@@ -2,12 +2,16 @@
 import math
 import sys
 from PIL import Image
+import os
 
-image = Image.open(sys.argv[1]).convert('L')
+inputFilename = sys.argv[1]
+outputFilename = os.path.splitext(inputFilename)[0] + ".img"
+
+image = Image.open(inputFilename).convert('L')
 
 bitsPerRow = math.ceil(image.width/8) * 8
 paddingBits = bitsPerRow - image.width
-outputFile = open(sys.argv[2], "wb")
+outputFile = open(outputFilename, "wb")
 
 outputFile.write(bytes((image.width,)))
 outputFile.write(bytes((image.height,)))
